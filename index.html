@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://a10.gaanacdn.com/images/gaanawebsite/albumdefaultcommonv1.jpg" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>songs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="./Media/logo.png" class="logu" alt="">
+            <ul>
+
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SPECIFICATIONS</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">CONNECT</a></li>
+
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE <br> REAL <br>  SOUNDS</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen </p>
+                <img src="./Media/play.png" id="icon" alt="">
+            </div>
+        </div>
+    </div>
+    <audio  id="mySong">
+        <source src="./Media/Everything-I-Do-I-Do-It-For-You.mp3">
+    </audio>
+    <script>
+        var myrsong = document.getElementById("mySong")
+        var icon = document.getElementById("icon")
+        icon.onclick=function(){
+            if (myrsong.paused) {
+                myrsong.play()
+                icon.src="./Media/pause.png"
+            }else{
+                myrsong.pause()
+                icon.src="./Media/play.png"
+            }
+        }
+    </script>
+</body>
+</html>
